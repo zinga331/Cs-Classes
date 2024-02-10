@@ -24,14 +24,14 @@ const HierarchyDisplay: React.FC<HierarchyDisplayProps> = ({ quotes }) => {
             return null;
         }
 
-        const quotesList = quotes.categories[selectedCategory][selectedSubcategory];
+        const quotesList = quotes.quotes.filter(quote => quote.category === selectedCategory && quote.subcategory === selectedSubcategory);
 
         return (
             <div>
                 {quotesList.map((quote, index) => (
                     <div key={index}>
-                        <p>{quote}</p>
-                        <p>- Author</p>
+                        <p>{quote.quote}</p>
+                        <p>- {quote.author}</p>
                     </div>
                 ))}
             </div>
@@ -40,23 +40,26 @@ const HierarchyDisplay: React.FC<HierarchyDisplayProps> = ({ quotes }) => {
 
     return (
         <div>
-            <h2>Categories</h2>
-            {Object.keys(quotes.categories).map((category) => (
-                <div key={category}>
-                    <h3>{category}</h3>
-                    {Object.keys(quotes.categories[category]).map((subcategory) => (
-                        <div key={subcategory}>
-                            <button onClick={() => handleCategoryClick(category)}>{subcategory}</button>
-                            {selectedCategory === category && selectedSubcategory === subcategory && (
-                                <div>
-                                    <h4>Quotes</h4>
-                                    {renderQuotes()}
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                </div>
-            ))}
+            <div>
+                <h2>Categories</h2>
+                {Array.from(quotes.categories).map((category, index) => (
+                    <div key={index} onClick={() => handleCategoryClick(category)}>
+                        {category}
+                    </div>
+                ))}
+            </div>
+            <div>
+                <h2>Subcategories</h2>
+                {Array.from(quotes.subcategories).map((subcategory, index) => (
+                    <div key={index} onClick={() => handleSubcategoryClick(subcategory)}>
+                        {subcategory}
+                    </div>
+                ))}
+            </div>
+            <div>
+                <h2>Quotes</h2>
+                {renderQuotes()}
+            </div>
         </div>
     );
 };
