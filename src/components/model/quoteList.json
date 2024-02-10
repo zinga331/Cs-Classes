@@ -1,76 +1,96 @@
 {
-    "quotes": [
-      {
-        "category": "Motivation",
-        "subcategory": "Self-improvement",
-        "author": "Vince Lombardi",
-        "quote": "Perfection is not attainable, but if we chase perfection we can catch excellence."
-      },
-      {
-        "category": "Motivation",
-        "subcategory": "Goal-setting",
-        "author": "Zig Ziglar",
-        "quote": "You don't have to be great to start, but you have to start to be great."
-      },
-      {
-        "category": "Motivation",
-        "subcategory": "Perseverance",
-        "author": "Napoleon Hill",
-        "quote": "Strength and growth come only through continuous effort and struggle."
-      },
-      {
-        "category": "Inspiration",
-        "subcategory": "Creativity",
-        "author": "Albert Einstein",
-        "quote": "Imagination is more important than knowledge."
-      },
-      {
-        "category": "Inspiration",
-        "subcategory": "Innovation",
-        "author": "Steve Jobs",
-        "quote": "Innovation distinguishes between a leader and a follower."
-      },
-      {
-        "category": "Inspiration",
-        "subcategory": "Vision",
-        "author": "Helen Keller",
-        "quote": "The only thing worse than being blind is having sight but no vision."
-      },
-      {
-        "category": "Wisdom",
-        "subcategory": "Life",
-        "author": "Mark Twain",
-        "quote": "The two most important days in your life are the day you are born and the day you find out why."
-      },
-      {
-        "category": "Wisdom",
-        "subcategory": "Experience",
-        "author": "Oscar Wilde",
-        "quote": "Experience is simply the name we give our mistakes."
-      },
-      {
-        "category": "Wisdom",
-        "subcategory": "Understanding",
-        "author": "Socrates",
-        "quote": "True wisdom comes to each of us when we realize how little we understand about life, ourselves, and the world around us."
-      },
-      {
-        "category": "Success",
-        "subcategory": "Achievement",
-        "author": "Winston Churchill",
-        "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts."
-      },
-      {
-        "category": "Success",
-        "subcategory": "Ambition",
-        "author": "Robert H. Schuller",
-        "quote": "What great thing would you attempt if you knew you could not fail?"
-      },
-      {
-        "category": "Success",
-        "subcategory": "Determination",
-        "author": "Thomas A. Edison",
-        "quote": "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time."
-      }
-    ]
-  }
+  "quotes": [
+    {
+      "category": "Motivation",
+      "subcategory": "Self-improvement",
+      "author": "Vince Lombardi",
+      "quote": "Perfection is not attainable, but if we chase perfection we can catch excellence."
+    },
+    {
+      "category": "Motivation",
+      "subcategory": "Goal-setting",
+      "author": "Zig Ziglar",
+      "quote": "You don't have to be great to start, but you have to start to be great."
+    },
+    {
+      "category": "Motivation",
+      "subcategory": "Perseverance",
+      "author": "Napoleon Hill",
+      "quote": "Strength and growth come only through continuous effort and struggle."
+    },
+    {
+      "category": "Inspiration",
+      "subcategory": "Creativity",
+      "author": "Albert Einstein",
+      "quote": "Imagination is more important than knowledge."
+    },
+    {
+      "category": "Inspiration",
+      "subcategory": "Innovation",
+      "author": "Steve Jobs",
+      "quote": "Innovation distinguishes between a leader and a follower."
+    },
+    {
+      "category": "Inspiration",
+      "subcategory": "Vision",
+      "author": "Helen Keller",
+      "quote": "The only thing worse than being blind is having sight but no vision."
+    },
+    {
+      "category": "Wisdom",
+      "subcategory": "Life",
+      "author": "Mark Twain",
+      "quote": "The two most important days in your life are the day you are born and the day you find out why."
+    },
+    {
+      "category": "Wisdom",
+      "subcategory": "Experience",
+      "author": "Oscar Wilde",
+      "quote": "Experience is simply the name we give our mistakes."
+    },
+    {
+      "category": "Wisdom",
+      "subcategory": "Understanding",
+      "author": "Socrates",
+      "quote": "True wisdom comes to each of us when we realize how little we understand about life, ourselves, and the world around us."
+    },
+    {
+      "category": "Success",
+      "subcategory": "Achievement",
+      "author": "Winston Churchill",
+      "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts."
+    },
+    {
+      "category": "Success",
+      "subcategory": "Ambition",
+      "author": "Robert H. Schuller",
+      "quote": "What great thing would you attempt if you knew you could not fail?"
+    },
+    {
+      "category": "Success",
+      "subcategory": "Determination",
+      "author": "Thomas A. Edison",
+      "quote": "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time."
+    }
+  ],
+  "categories": [
+    "Motivation",
+    "Inspiration",
+    "Wisdom",
+    "Success"
+  ],
+  "subcategories": [
+    "Self-improvement",
+    "Goal-setting",
+    "Perseverance",
+    "Creativity",
+    "Innovation",
+    "Vision",
+    "Life",
+    "Experience",
+    "Understanding",
+    "Achievement",
+    "Ambition",
+    "Determination"
+  ]
+}

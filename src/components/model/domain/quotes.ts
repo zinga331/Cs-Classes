@@ -7,4 +7,6 @@ export interface Quote {
 
 export interface Quotes {
     quotes: Quote[];
+    categories: Set<string>;
+    subcategories: Set<string>;
 }
