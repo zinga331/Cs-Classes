@@ -1,16 +1,14 @@
-import React from 'react';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
-// import Display1 from './Display1';
-// import Display2 from './Display2';
-// import Display3 from './Display3';
+import { HashRouter as Router, Route, Link, Routes } from "react-router-dom";
+import HierarchyDisplay from "../displays/HierarchyDisplay.tsx";
+import { getQuotes } from "../model/service/quoteService.ts";
 
 const Header = () => {
     return (
         <Router>
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
+            <div style={{ display: "flex", flexDirection: "row" }}>
                 <ul>
                     <li>
-                        <Link to="/route1">Route 1</Link>
+                        <Link to="/hierchy">Hierarchical</Link>
                     </li>
                     <li>
                         <Link to="/route2">Route 2</Link>
@@ -22,9 +20,11 @@ const Header = () => {
 
                 <hr />
 
-                {/* <Route path="/route1" component={Display1} />
-                <Route path="/route2" component={Display2} />
-                <Route path="/route3" component={Display3} /> */}
+                <Routes>
+                    <Route path="/hierchy" element={<HierarchyDisplay quotes={getQuotes()} />} />                
+                    {/* <Route path="/route2" Component={Display2} />
+                    <Route path="/route3" Component={Display3} /> */}
+                </Routes>
             </div>
         </Router>
     );
