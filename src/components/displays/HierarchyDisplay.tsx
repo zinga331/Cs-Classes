@@ -5,23 +5,22 @@ interface Props {
   quotes: Quotes;
 }
 
-const HierarchyDisplay = (props : Props)=> {
+const HierarchyDisplay = (props: Props) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(
     null
   );
-const [filteredQuotes, setFilteredQuotes] = useState<Quote[]>([]);
-useEffect(() => {
+  const [filteredQuotes, setFilteredQuotes] = useState<Quote[]>([]);
+  useEffect(() => {
     if (selectedCategory && selectedSubcategory) {
-        const newFilteredQuotes = props.quotes.quotes.filter(
-            (quote) =>
-                quote.category === selectedCategory &&
-                quote.subcategory === selectedSubcategory
-        );
-        setFilteredQuotes(newFilteredQuotes);
+      const newFilteredQuotes = props.quotes.quotes.filter(
+        (quote) =>
+          quote.category === selectedCategory &&
+          quote.subcategory === selectedSubcategory
+      );
+      setFilteredQuotes(newFilteredQuotes);
     }
-}, [selectedCategory, selectedSubcategory, props.quotes]);
-
+  }, [selectedCategory, selectedSubcategory, props.quotes]);
 
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
@@ -34,31 +33,31 @@ useEffect(() => {
     console.log(subcategory + " clicked");
   };
 
-const renderSubcategories = () => {
+  const renderSubcategories = () => {
     if (!selectedCategory) {
-        return null;
+      return null;
     }
 
-
     const subcategoriesList = props.quotes.quotes
-        .filter((quote) => quote.category === selectedCategory)
-        .map((quote) => quote.subcategory);
+      .filter((quote) => quote.category === selectedCategory)
+      .map((quote) => quote.subcategory);
 
     // Create a Set to remove duplicates
     const uniqueSubcategories = Array.from(new Set(subcategoriesList));
 
     return (
-        <div>
-            {uniqueSubcategories.map((subcategory, index) => (
-                <div key={index}>
-                    <button onClick={() => handleSubcategoryClick(subcategory)}>
-                        {subcategory}
-                    </button>
-                </div>
-            ))}
-        </div>
+      <div>
+        <h2>Subcategories</h2>
+        {uniqueSubcategories.map((subcategory, index) => (
+          <div key={index}>
+            <button onClick={() => handleSubcategoryClick(subcategory)}>
+              {subcategory}
+            </button>
+          </div>
+        ))}
+      </div>
     );
-};
+  };
 
   const renderQuotes = () => {
     if (!selectedCategory) {
@@ -69,9 +68,9 @@ const renderSubcategories = () => {
       console.log(filteredQuotes[i]);
     }
 
-
     return (
       <div>
+        <h2>Quotes</h2>
         {filteredQuotes.map((quote, index) => (
           <div key={index}>
             <p>{quote.quote}</p>
@@ -93,14 +92,8 @@ const renderSubcategories = () => {
           </div>
         ))}
       </div>
-      <div>
-        <h2>Subcategories</h2>
-        {renderSubcategories()}
-      </div>
-      <div>
-        <h2>Quotes</h2>
-        {renderQuotes()}
-      </div>
+      <div>{renderSubcategories()}</div>
+      <div>{renderQuotes()}</div>
     </div>
   );
 };
