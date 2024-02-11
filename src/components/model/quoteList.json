@@ -71,6 +71,137 @@
       "subcategory": "Determination",
       "author": "Thomas A. Edison",
       "quote": "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time."
+    },
+    {
+      "category": "Motivation",
+      "subcategory": "Self-improvement",
+      "author": "Jim Rohn",
+      "quote": "Your life does not get better by chance, it gets better by change."
+    },
+    {
+      "category": "Motivation",
+      "subcategory": "Goal-setting",
+      "author": "Tony Robbins",
+      "quote": "Setting goals is the first step in turning the invisible into the visible."
+    },
+    {
+      "category": "Motivation",
+      "subcategory": "Perseverance",
+      "author": "Harriet Beecher Stowe",
+      "quote": "When you get into a tight place and everything goes against you, till it seems as though you could not hang on a minute longer, never give up then, for that is just the place and time that the tide will turn."
+    },
+    {
+      "category": "Inspiration",
+      "subcategory": "Creativity",
+      "author": "Pablo Picasso",
+      "quote": "Every child is an artist. The problem is how to remain an artist once we grow up."
+    },
+    {
+      "category": "Inspiration",
+      "subcategory": "Innovation",
+      "author": "Elon Musk",
+      "quote": "Some people don't like change, but you need to embrace change if the alternative is disaster."
+    },
+    {
+      "category": "Inspiration",
+      "subcategory": "Vision",
+      "author": "Martin Luther King Jr.",
+      "quote": "I have a dream that one day this nation will rise up and live out the true meaning of its creed: 'We hold these truths to be self-evident, that all men are created equal.'"
+    },
+    {
+      "category": "Wisdom",
+      "subcategory": "Life",
+      "author": "Ralph Waldo Emerson",
+      "quote": "Life is a journey, not a destination."
+    },
+    {
+      "category": "Wisdom",
+      "subcategory": "Experience",
+      "author": "Confucius",
+      "quote": "By three methods we may learn wisdom: First, by reflection, which is noblest; Second, by imitation, which is easiest; and third by experience, which is the bitterest."
+    },
+    {
+      "category": "Wisdom",
+      "subcategory": "Understanding",
+      "author": "Lao Tzu",
+      "quote": "Knowing others is intelligence; knowing yourself is true wisdom. Mastering others is strength; mastering yourself is true power."
+    },
+    {
+      "category": "Success",
+      "subcategory": "Achievement",
+      "author": "Nelson Mandela",
+      "quote": "The greatest glory in living lies not in never falling, but in rising every time we fall."
+    },
+    {
+      "category": "Success",
+      "subcategory": "Ambition",
+      "author": "Maya Angelou",
+      "quote": "Success is liking yourself, liking what you do, and liking how you do it."
+    },
+    {
+      "category": "Success",
+      "subcategory": "Determination",
+      "author": "Michael Jordan",
+      "quote": "I can accept failure, everyone fails at something. But I can't accept not trying."
+    },
+    {
+      "quote": "I'm not lazy, I'm just on my energy-saving mode.",
+      "author": "Unknown",
+      "category": "Humor",
+      "subcategory": "Jokes"
+    },
+    {
+      "quote": "There are only 10 types of people in the world: those who understand binary, and those who don't.",
+      "author": "Unknown",
+      "category": "Computer Science",
+      "subcategory": "Jokes"
+    },
+    {
+      "quote": "Faith is taking the first step even when you don't see the whole staircase.",
+      "author": "Martin Luther King Jr.",
+      "category": "Faith",
+      "subcategory": "Religion"
+    },
+    {
+      "quote": "Honesty is the first chapter in the book of wisdom.",
+      "author": "Thomas Jefferson",
+      "category": "Honesty",
+      "subcategory": "Virtue"
+    },
+    {
+      "quote": "I told my wife she should embrace her mistakes. She gave me a hug.",
+      "author": "Unknown",
+      "category": "Humor",
+      "subcategory": "Jokes"
+    },
+    {
+      "quote": "Why do programmers prefer dark mode? Because light attracts bugs.",
+      "author": "Unknown",
+      "category": "Computer Science",
+      "subcategory": "Jokes"
+    },
+    {
+      "quote": "Faith is not the belief that God will do what you want. It is the belief that God will do what is right.",
+      "author": "Max Lucado",
+      "category": "Faith",
+      "subcategory": "Religion"
+    },
+    {
+      "quote": "Honesty is the best policy. If I lose mine honor, I lose myself.",
+      "author": "William Shakespeare",
+      "category": "Honesty",
+      "subcategory": "Advice"
+    },
+    {
+      "quote": "I'm not lazy, I'm just on my energy-saving mode.",
+      "author": "Unknown",
+      "category": "Humor",
+      "subcategory": "Jokes"
+    },
+    {
+      "quote": "Why do programmers prefer dark mode? Because light attracts bugs.",
+      "author": "Unknown",
+      "category": "Computer Science"
     }
   ],
   "categories": [
