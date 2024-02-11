@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Quotes, Quote } from "../model/domain/quotes";
-import { render } from "react-dom";
 
-interface HierarchyDisplayProps {
+interface Props {
   quotes: Quotes;
 }
 
-const HierarchyDisplay: React.FC<HierarchyDisplayProps> = ({ quotes }) => {
+const HierarchyDisplay = (props : Props)=> {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(
     null
@@ -14,14 +13,14 @@ const HierarchyDisplay: React.FC<HierarchyDisplayProps> = ({ quotes }) => {
 const [filteredQuotes, setFilteredQuotes] = useState<Quote[]>([]);
 useEffect(() => {
     if (selectedCategory && selectedSubcategory) {
-        const newFilteredQuotes = quotes.quotes.filter(
+        const newFilteredQuotes = props.quotes.quotes.filter(
             (quote) =>
                 quote.category === selectedCategory &&
                 quote.subcategory === selectedSubcategory
         );
         setFilteredQuotes(newFilteredQuotes);
     }
-}, [selectedCategory, selectedSubcategory, quotes]);
+}, [selectedCategory, selectedSubcategory, props.quotes]);
 
 
   const handleCategoryClick = (category: string) => {
@@ -41,7 +40,7 @@ const renderSubcategories = () => {
     }
 
 
-    const subcategoriesList = quotes.quotes
+    const subcategoriesList = props.quotes.quotes
         .filter((quote) => quote.category === selectedCategory)
         .map((quote) => quote.subcategory);
 
@@ -86,7 +85,7 @@ const renderSubcategories = () => {
     <div>
       <div>
         <h2>Categories</h2>
-        {Array.from(quotes.categories).map((category, index) => (
+        {Array.from(props.quotes.categories).map((category, index) => (
           <div key={index}>
             <button onClick={() => handleCategoryClick(category)}>
               {category}
