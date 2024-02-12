@@ -1,20 +1,19 @@
 import { useState, useEffect } from "react";
 import { Quotes, Quote } from "../model/domain/quotes";
-import Carousel from "react-bootstrap/Carousel";
-import { CarouselItem } from "react-bootstrap";
+// import { Card, CardContent, Typography } from '@material-ui/core';
+
 
 interface Props {
   quotes: Quotes;
 }
 
-const CarouselDisplay = (props: Props) => {
+const BulkDisplay = (props: Props) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(
     null
   );
   const [filteredQuotes, setFilteredQuotes] = useState<Quote[]>([]);
   const [activeIndex, setActiveIndex] = useState(0); // Add activeIndex state
-
 
   useEffect(() => {
     if (selectedCategory && selectedSubcategory) {
@@ -42,36 +41,41 @@ const CarouselDisplay = (props: Props) => {
     console.log(event.target.value + " clicked");
   };
 
-  const renderSubcategories = () => {
+
+  const renderSubcategoriesAndQuotes = () => {
     if (!selectedCategory) {
       return null;
     }
 
-    const subcategoriesList = props.quotes.quotes
-      .filter((quote) => quote.category === selectedCategory)
-      .map((quote) => quote.subcategory);
-
-    // Create a Set to remove duplicates
-    const uniqueSubcategories = Array.from(new Set(subcategoriesList));
-
- 
-
-    return (
-      <div>
-        <select onChange={handleSubcategoryChange}>
-          <option value="">Select Subcategory</option>
-          {uniqueSubcategories.map((subcategory, index) => (
-            <option key={index} value={subcategory}>
-              {subcategory}
-            </option>
-          ))}
-        </select>
-      </div>
+    // Filter quotes based on the selected category
+    const filteredQuotes = props.quotes.quotes.filter(
+      (quote) => quote.category === selectedCategory
     );
-  };
 
-  const handleSlideChange = (nextIndex: number) => {
-    setActiveIndex(nextIndex);
+    // Get unique subcategories
+    const subcategories = Array.from(
+      new Set(filteredQuotes.map((quote) => quote.subcategory))
+    );
+
+    return subcategories.map((subcategory) => {
+      // Filter quotes based on the current subcategory
+      const quotesInSubcategory = filteredQuotes.filter(
+        (quote) => quote.subcategory === subcategory
+      );
+
+      return (
+        <div>
+          <div key={subcategory}>
+            <h3>{subcategory}</h3>
+            {quotesInSubcategory.map((quote) => (
+              <p key={quote.id}>
+                {quote.quote} - {quote.author}
+              </p>
+            ))}
+          </div>
+        </div>
+      );
+    });
   };
 
   return (
@@ -88,24 +92,10 @@ const CarouselDisplay = (props: Props) => {
         </select>
       </div>
       <div>
-        <h2>Subcategories</h2>
-        {renderSubcategories()}
-      </div>
-      <div>
-        <h2>Quotes</h2>
-        <Carousel activeIndex={activeIndex} onSelect={handleSlideChange}> {/* Add activeIndex and handleSlideChange */}
-          {filteredQuotes.map((quote) => (
-            <CarouselItem key={quote.id}> 
-              <Carousel.Caption>
-                <h3>{quote.author}</h3>
-                <p>{quote.quote}</p>
-              </Carousel.Caption>
-            </CarouselItem>
-          ))}
-        </Carousel>
+        {renderSubcategoriesAndQuotes()}
       </div>
     </div>
   );
 };
 
-export default CarouselDisplay;
+export default BulkDisplay;
