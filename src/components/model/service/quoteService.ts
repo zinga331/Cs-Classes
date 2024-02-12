@@ -1,12 +1,12 @@
 // quoteService.ts
 import quotes from '../quoteList.json';
 import { Quotes, Quote } from '../domain/quotes';
-
 export function getQuotes() {
     // iterate through the quotes from quoteList.json and create a new Quotes object
     const quotesList: Quotes = {
         quotes: quotes.quotes.map((quote: any) => {
             return {
+                id: quote.id,
                 author: quote.author,
                 quote: quote.quote,
                 category: quote.category,
