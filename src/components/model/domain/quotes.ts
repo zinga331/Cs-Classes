@@ -3,6 +3,7 @@ export interface Quote {
     subcategory: string;
     author: string;
     quote: string;
+    id: number;
 }
 
 export interface Quotes {

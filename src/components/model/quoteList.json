@@ -1,207 +1,242 @@
 {
   "quotes": [
     {
+      "id": 0,
       "category": "Motivation",
       "subcategory": "Self-improvement",
       "author": "Vince Lombardi",
       "quote": "Perfection is not attainable, but if we chase perfection we can catch excellence."
     },
     {
+      "id": 1,
       "category": "Motivation",
       "subcategory": "Goal-setting",
       "author": "Zig Ziglar",
       "quote": "You don't have to be great to start, but you have to start to be great."
     },
     {
+      "id": 2,
       "category": "Motivation",
       "subcategory": "Perseverance",
       "author": "Napoleon Hill",
       "quote": "Strength and growth come only through continuous effort and struggle."
     },
     {
+      "id": 3,
       "category": "Inspiration",
       "subcategory": "Creativity",
       "author": "Albert Einstein",
       "quote": "Imagination is more important than knowledge."
     },
     {
+      "id": 4,
       "category": "Inspiration",
       "subcategory": "Innovation",
       "author": "Steve Jobs",
       "quote": "Innovation distinguishes between a leader and a follower."
     },
     {
+      "id": 5,
       "category": "Inspiration",
       "subcategory": "Vision",
       "author": "Helen Keller",
       "quote": "The only thing worse than being blind is having sight but no vision."
     },
     {
+      "id": 6,
       "category": "Wisdom",
       "subcategory": "Life",
       "author": "Mark Twain",
       "quote": "The two most important days in your life are the day you are born and the day you find out why."
     },
     {
+      "id": 7,
       "category": "Wisdom",
       "subcategory": "Experience",
       "author": "Oscar Wilde",
       "quote": "Experience is simply the name we give our mistakes."
     },
     {
+      "id": 8,
       "category": "Wisdom",
       "subcategory": "Understanding",
       "author": "Socrates",
       "quote": "True wisdom comes to each of us when we realize how little we understand about life, ourselves, and the world around us."
     },
     {
+      "id": 9,
       "category": "Success",
       "subcategory": "Achievement",
       "author": "Winston Churchill",
       "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts."
     },
     {
+      "id": 10,
       "category": "Success",
       "subcategory": "Ambition",
       "author": "Robert H. Schuller",
       "quote": "What great thing would you attempt if you knew you could not fail?"
     },
     {
+      "id": 11,
       "category": "Success",
       "subcategory": "Determination",
       "author": "Thomas A. Edison",
       "quote": "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time."
     },
     {
+      "id": 12,
       "category": "Motivation",
       "subcategory": "Self-improvement",
       "author": "Jim Rohn",
       "quote": "Your life does not get better by chance, it gets better by change."
     },
     {
+      "id": 13,
       "category": "Motivation",
       "subcategory": "Goal-setting",
       "author": "Tony Robbins",
       "quote": "Setting goals is the first step in turning the invisible into the visible."
     },
     {
+      "id": 14,
       "category": "Motivation",
       "subcategory": "Perseverance",
       "author": "Harriet Beecher Stowe",
       "quote": "When you get into a tight place and everything goes against you, till it seems as though you could not hang on a minute longer, never give up then, for that is just the place and time that the tide will turn."
     },
     {
+      "id": 15,
       "category": "Inspiration",
       "subcategory": "Creativity",
       "author": "Pablo Picasso",
       "quote": "Every child is an artist. The problem is how to remain an artist once we grow up."
     },
     {
+      "id": 16,
       "category": "Inspiration",
       "subcategory": "Innovation",
       "author": "Elon Musk",
       "quote": "Some people don't like change, but you need to embrace change if the alternative is disaster."
     },
     {
+      "id": 17,
       "category": "Inspiration",
       "subcategory": "Vision",
       "author": "Martin Luther King Jr.",
       "quote": "I have a dream that one day this nation will rise up and live out the true meaning of its creed: 'We hold these truths to be self-evident, that all men are created equal.'"
     },
     {
+      "id": 18,
       "category": "Wisdom",
       "subcategory": "Life",
       "author": "Ralph Waldo Emerson",
       "quote": "Life is a journey, not a destination."
     },
     {
+      "id": 19,
       "category": "Wisdom",
       "subcategory": "Experience",
       "author": "Confucius",
       "quote": "By three methods we may learn wisdom: First, by reflection, which is noblest; Second, by imitation, which is easiest; and third by experience, which is the bitterest."
     },
     {
+      "id": 20,
       "category": "Wisdom",
       "subcategory": "Understanding",
       "author": "Lao Tzu",
       "quote": "Knowing others is intelligence; knowing yourself is true wisdom. Mastering others is strength; mastering yourself is true power."
     },
     {
+      "id": 21,
       "category": "Success",
       "subcategory": "Achievement",
       "author": "Nelson Mandela",
       "quote": "The greatest glory in living lies not in never falling, but in rising every time we fall."
     },
     {
+      "id": 22,
       "category": "Success",
       "subcategory": "Ambition",
       "author": "Maya Angelou",
       "quote": "Success is liking yourself, liking what you do, and liking how you do it."
     },
     {
+      "id": 23,
       "category": "Success",
       "subcategory": "Determination",
       "author": "Michael Jordan",
       "quote": "I can accept failure, everyone fails at something. But I can't accept not trying."
     },
     {
+      "id": 24,
       "quote": "I'm not lazy, I'm just on my energy-saving mode.",
       "author": "Github Copilot",
       "category": "Humor",
       "subcategory": "Jokes"
     },
     {
+      "id": 25,
       "quote": "There are only 10 types of people in the world: those who understand binary, and those who don't.",
       "author": "Github Copilot",
       "category": "Computer Science",
       "subcategory": "Jokes"
     },
     {
+      "id": 26,
       "quote": "Faith is taking the first step even when you don't see the whole staircase.",
       "author": "Martin Luther King Jr.",
       "category": "Faith",
       "subcategory": "Religion"
     },
     {
+      "id": 27,
       "quote": "Honesty is the first chapter in the book of wisdom.",
       "author": "Thomas Jefferson",
       "category": "Honesty",
       "subcategory": "Virtue"
     },
     {
+      "id": 28,
       "quote": "I told my wife she should embrace her mistakes. She gave me a hug.",
       "author": "Github Copilot",
       "category": "Humor",
       "subcategory": "Jokes"
     },
     {
+      "id": 29,
       "quote": "Why do programmers prefer dark mode? Because light attracts bugs.",
       "author": "Github Copilot",
       "category": "Computer Science",
       "subcategory": "Jokes"
     },
     {
+      "id": 30,
       "quote": "Faith is not the belief that God will do what you want. It is the belief that God will do what is right.",
       "author": "Max Lucado",
       "category": "Faith",
       "subcategory": "Religion"
     },
     {
+      "id": 31,
       "quote": "Honesty is the best policy. If I lose mine honor, I lose myself.",
       "author": "William Shakespeare",
       "category": "Honesty",
       "subcategory": "Advice"
     },
     {
+      "id": 32,
       "quote": "What's green, has four legs, and if it fell out of a tree it would kill you? A pool table.",
       "author": "Chris' Childhood",
       "category": "Humor",
       "subcategory": "Anti-Jokes"
     },
     {
+      "id": 33,
       "quote": "Why do programmers prefer dark mode? Because light attracts bugs.",
       "author": "Github Copilot",
-      "category": "Computer Science"
+      "category": "Computer Science",
+      "subcategory": "Jokes"
     }
   ],
   "categories": [

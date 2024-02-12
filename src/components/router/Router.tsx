@@ -1,5 +1,6 @@
 import { HashRouter as Router, Route, Link, Routes } from "react-router-dom";
 import HierarchyDisplay from "../displays/HierarchyDisplay.tsx";
+import CarouselDisplay from "../displays/CarouselDisplay.tsx";
 import { getQuotes } from "../model/service/quoteService.ts";
 
 const Header = () => {
@@ -11,7 +12,7 @@ const Header = () => {
                         <Link to="/hierchy">Hierarchical</Link>
                     </li>
                     <li>
-                        <Link to="/route2">Route 2</Link>
+                        <Link to="/carousel">Carousel</Link>
                     </li>
                     <li>
                         <Link to="/route3">Route 3</Link>
@@ -21,7 +22,9 @@ const Header = () => {
                 <hr />
 
                 <Routes>
-                    <Route path="/hierchy" element={<HierarchyDisplay quotes={getQuotes()} />} />                
+                    <Route path="/hierchy" element={<HierarchyDisplay quotes={getQuotes()} />} /> 
+                    <Route path="/carousel" element={<CarouselDisplay quotes={getQuotes()} />} />                
+
                     {/* <Route path="/route2" Component={Display2} />
                     <Route path="/route3" Component={Display3} /> */}
                 </Routes>
