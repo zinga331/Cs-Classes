@@ -179,8 +179,8 @@
       "id": 25,
       "quote": "There are only 10 types of people in the world: those who understand binary, and those who don't.",
       "author": "Github Copilot",
-      "category": "Computer Science",
-      "subcategory": "Jokes"
+      "category": "Humor",
+      "subcategory": "Computer Science"
     },
     {
       "id": 26,
@@ -205,10 +205,10 @@
     },
     {
       "id": 29,
-      "quote": "Why do programmers prefer dark mode? Because light attracts bugs.",
-      "author": "Github Copilot",
-      "category": "Computer Science",
-      "subcategory": "Jokes"
+      "quote": "The only way to do great work is to love what you do.",
+      "author": "Steve Jobs",
+      "category": "Motivation",
+      "subcategory": "Self-improvement"
     },
     {
       "id": 30,
@@ -235,8 +235,8 @@
       "id": 33,
       "quote": "Why do programmers prefer dark mode? Because light attracts bugs.",
       "author": "Github Copilot",
-      "category": "Computer Science",
-      "subcategory": "Jokes"
+      "category": "Humor",
+      "subcategory": "Computer Science"
     }
   ],
   "categories": [
