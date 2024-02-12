@@ -1,6 +1,7 @@
 import { HashRouter as Router, Route, Link, Routes } from "react-router-dom";
 import HierarchyDisplay from "../displays/HierarchyDisplay.tsx";
 import BulkDisplay from "../displays/BulkDisplay.tsx";
+import SearchDisplay from "../displays/SearchDisplay.tsx";
 import { getQuotes } from "../model/service/quoteService.ts";
 
 const Header = () => {
@@ -12,10 +13,10 @@ const Header = () => {
                         <Link to="/hierchy">Hierarchical</Link>
                     </li>
                     <li>
-                        <Link to="/BulkDisplay">BulkDisplay</Link>
+                        <Link to="/BulkDisplay">Bulk</Link>
                     </li>
                     <li>
-                        <Link to="/route3">Route 3</Link>
+                        <Link to="/SearchDisplay">Searchable</Link>
                     </li>
                 </ul>
 
@@ -23,10 +24,8 @@ const Header = () => {
 
                 <Routes>
                     <Route path="/hierchy" element={<HierarchyDisplay quotes={getQuotes()} />} /> 
-                    <Route path="/BulkDisplay" element={<BulkDisplay quotes={getQuotes()} />} />                
-
-                    {/* <Route path="/route2" Component={Display2} />
-                    <Route path="/route3" Component={Display3} /> */}
+                    <Route path="/BulkDisplay" element={<BulkDisplay quotes={getQuotes()} />} />   
+                    <Route path="/SearchDisplay" element={<SearchDisplay quotes={getQuotes()} />} />             
                 </Routes>
             </div>
         </Router>
