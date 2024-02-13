@@ -1,0 +1,15 @@
+.hierarchy-display-container {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.categories-container,
+.subcategories-container,
+.quotes-container {
+    margin-right: 20px;
+}
+
+button {
+    margin-bottom: 10px;
+}

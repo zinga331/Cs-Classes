@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Quotes, Quote } from "../model/domain/quotes";
+import "./Display.css";
 
 interface Props {
   quotes: Quotes;
@@ -30,20 +31,20 @@ const BulkDisplay = (props: Props) => {
     if (!selectedCategory) {
       return null;
     }
-  
+
     // Get unique subcategories
     const subcategories = Array.from(
       new Set(filteredQuotes.map((quote) => quote.subcategory))
     );
-  
+
     return subcategories.map((subcategory) => {
       // Filter quotes based on the current subcategory
       const quotesInSubcategory = filteredQuotes.filter(
         (quote) => quote.subcategory === subcategory
       );
-  
+
       return (
-        <div key={subcategory}>
+        <div key={subcategory} className="subcategories-container">
           <h3>{subcategory}</h3>
           {quotesInSubcategory.map((quote) => (
             <p key={quote.id}>
@@ -56,8 +57,8 @@ const BulkDisplay = (props: Props) => {
   };
 
   return (
-    <div>
-      <div>
+    <div className="hierarchy-display-container">
+      <div className="categories-container">
         <h2>Categories</h2>
         <select onChange={handleCategoryChange}>
           <option value="">Select Category</option>
@@ -68,7 +69,7 @@ const BulkDisplay = (props: Props) => {
           ))}
         </select>
       </div>
-      <div>{renderSubcategoriesAndQuotes()}</div>
+      <div className="quotes-container">{renderSubcategoriesAndQuotes()}</div>
     </div>
   );
 };

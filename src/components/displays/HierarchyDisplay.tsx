@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Quotes, Quote } from "../model/domain/quotes";
+import "./Display.css";
 
 interface Props {
   quotes: Quotes;
@@ -46,7 +47,7 @@ const HierarchyDisplay = (props: Props) => {
     const uniqueSubcategories = Array.from(new Set(subcategoriesList));
 
     return (
-      <div>
+      <div className="subcategories-container">
         <h2>Subcategories</h2>
         {uniqueSubcategories.map((subcategory, index) => (
           <div key={index}>
@@ -69,7 +70,7 @@ const HierarchyDisplay = (props: Props) => {
     }
 
     return (
-      <div>
+      <div className="quotes-container">
         <h2>Quotes</h2>
         {filteredQuotes.map((quote, index) => (
           <div key={index}>
@@ -81,8 +82,8 @@ const HierarchyDisplay = (props: Props) => {
     );
   };
   return (
-    <div>
-      <div>
+    <div className="hierarchy-display-container">
+      <div className="categories-container">
         <h2>Categories</h2>
         {Array.from(props.quotes.categories).map((category, index) => (
           <div key={index}>
