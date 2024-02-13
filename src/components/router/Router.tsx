@@ -3,11 +3,12 @@ import HierarchyDisplay from "../displays/HierarchyDisplay.tsx";
 import BulkDisplay from "../displays/BulkDisplay.tsx";
 import SearchDisplay from "../displays/SearchDisplay.tsx";
 import { getQuotes } from "../model/service/quoteService.ts";
+import './Header.css';
 
 const Header = () => {
     return (
         <Router>
-            <div style={{ display: "flex", flexDirection: "row" }}>
+            <div style={{ display: "flex", flexDirection: "column" }}>
                 <ul>
                     <li>
                         <Link to="/hierchy">Hierarchical</Link>
