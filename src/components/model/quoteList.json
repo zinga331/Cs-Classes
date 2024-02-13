@@ -237,6 +237,13 @@
       "author": "Github Copilot",
       "category": "Humor",
       "subcategory": "Computer Science"
+    },
+    {
+      "id": 34,
+      "quote": "Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo",
+      "author": "Dmitri Borgmann",
+      "category": "Humor",
+      "subcategory": "Grammar"
     }
   ],
   "categories": [
