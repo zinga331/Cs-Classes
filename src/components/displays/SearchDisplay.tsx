@@ -11,7 +11,9 @@ const SearchDisplay = (props: Props) => {
 
     useEffect(() => {
         const newFilteredQuotes = props.quotes.quotes.filter((quote) =>
-            quote.quote.toLowerCase().includes(searchTerm.toLowerCase())
+            quote.quote.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            quote.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            quote.subcategory.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setFilteredQuotes(newFilteredQuotes);
     }, [searchTerm, props.quotes]);
@@ -30,6 +32,7 @@ const SearchDisplay = (props: Props) => {
                 <h2>Quotes</h2>
                 {filteredQuotes.map((quote, index) => (
                     <div key={index}>
+                        <h3> {quote.category}: {quote.subcategory}</h3>
                         <p>{quote.quote}</p>
                         <p>- {quote.author}</p>
                     </div>
