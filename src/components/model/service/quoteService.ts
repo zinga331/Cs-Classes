@@ -1,6 +1,8 @@
 // quoteService.ts
 import quotes from '../quoteList.json';
 import { Quotes, Quote } from '../domain/quotes';
+import {Course} from '../domain/courses';
+
 export function getQuotes() {
     // iterate through the quotes from quoteList.json and create a new Quotes object
     const quotesList: Quotes = {
@@ -18,4 +20,9 @@ export function getQuotes() {
     };
     console.log(quotesList);
     return quotesList;
+}
+export function getCourses() {
+    let courses : Course[] = [];
+    // Your implementation here
+    return courses;
 }
