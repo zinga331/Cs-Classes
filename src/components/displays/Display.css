@@ -1,15 +1,30 @@
 .hierarchy-display-container {
-    display: flex;
-    flex-direction: row;
-    
+  display: flex;
+  position: absolute;
+  top: 6rem;
+  left: 1rem;
 }
 
 .categories-container,
 .subcategories-container,
 .quotes-container {
-    margin-right: 20px;
+  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 button {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: left;
+  color: #154c79;
+}
+
+p {
+  color: #154c79;
+}
+
+.vertical_break {
+  border-right: thin solid #d5d4cb;
 }
