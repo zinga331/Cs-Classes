@@ -36,6 +36,7 @@ const SearchDisplay = (props: Props) => {
           <div key={index}>
             <h3>{course.code}</h3>
             <p>{course.longName}</p>
+            <p>{course.courseTypicallyOffered}</p>
             <p>{course.description}</p>
             <p>Credit Hours: {course.credits.creditHours.value}</p>
             {course.note && <p>Note: {course.note}</p>}
