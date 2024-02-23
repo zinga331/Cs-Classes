@@ -14,7 +14,8 @@ const HierarchyDisplay = (props: Props) => {
   useEffect(() => {
     if (selectedSeason) {
       const newFilteredCourses = props.courses.filter(
-        (course) => course.courseTypicallyOffered.includes(selectedSeason)
+        (course) => course.courseTypicallyOffered.includes(selectedSeason) ||
+        course.courseTypicallyOffered.includes("All Semesters/Terms")
       );
       newFilteredCourses.sort((a, b) => a.code.localeCompare(b.code)); // Sort the courses alphabetically
       setFilteredCourses(newFilteredCourses);
@@ -28,6 +29,7 @@ const HierarchyDisplay = (props: Props) => {
     setSelectedSeason(season);
     setSelectedCourse(null);
     setFilteredCourses([]);
+    
   };
 
   const handleCourseClick = (courseCode: string) => {
