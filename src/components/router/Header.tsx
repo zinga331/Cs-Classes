@@ -27,6 +27,8 @@ const Header = () => {
             path="/SearchDisplay"
             element={<SearchDisplay courses={courses} />}
           />
+          {/* Set the default route to be hierarchy. */}
+          <Route path="/" element={<HierarchyDisplay courses={courses} />} />
         </Routes>
       </div>
 
