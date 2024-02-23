@@ -25,7 +25,7 @@ const Header = () => {
           />
           <Route
             path="/SearchDisplay"
-            element={<SearchDisplay quotes={getQuotes()} />}
+            element={<SearchDisplay courses={courses} />}
           />
         </Routes>
       </div>
