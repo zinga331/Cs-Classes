@@ -34,6 +34,7 @@ const SearchDisplay = (props: Props) => {
         <h2>Courses</h2>
         {filteredCourses.map((course, index) => (
           <div key={index}>
+            <h3>{course.code}</h3>
             <p>{course.longName}</p>
             <p>{course.description}</p>
             <p>Credit Hours: {course.credits.creditHours.value}</p>
