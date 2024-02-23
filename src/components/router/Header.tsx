@@ -1,7 +1,7 @@
 import { HashRouter as Router, Route, Link, Routes } from "react-router-dom";
 import HierarchyDisplay from "../displays/HierarchyDisplay.tsx";
 import SearchDisplay from "../displays/SearchDisplay.tsx";
-import { getQuotes } from "../model/service/quoteService.ts";
+// import { getQuotes } from "../model/service/quoteService.ts";
 import { courses } from "../model/service/quoteService.ts";
 import "./Header.css";
 
