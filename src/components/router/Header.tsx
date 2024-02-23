@@ -2,6 +2,7 @@ import { HashRouter as Router, Route, Link, Routes } from "react-router-dom";
 import HierarchyDisplay from "../displays/HierarchyDisplay.tsx";
 import SearchDisplay from "../displays/SearchDisplay.tsx";
 import { getQuotes } from "../model/service/quoteService.ts";
+import { courses } from "../model/service/quoteService.ts";
 import "./Header.css";
 
 const Header = () => {
@@ -20,7 +21,7 @@ const Header = () => {
         <Routes>
           <Route
             path="/hierchy"
-            element={<HierarchyDisplay quotes={getQuotes()} />}
+            element={<HierarchyDisplay courses={courses} />}
           />
           <Route
             path="/SearchDisplay"
@@ -28,6 +29,7 @@ const Header = () => {
           />
         </Routes>
       </div>
+
     </Router>
   );
 };
