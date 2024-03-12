@@ -25,6 +25,10 @@ export interface Course {
     labHours:     {value: number, min?: number};
   };
 
+  emphases: string[]; // e.g. ["Animation"]
+  // emphases[] include "No Emphasis" as the case where it's required for students not doing an emphasis
+  // emphases[] can be empty, for example with CS 142 (because it's no longer required/offered)
+
   courseTypicallyOffered: string; // e.g. "Fall and Winter"
   courseType: string; // e.g. "C - Combined Lecture and Activity"
   note?: string;
