@@ -39,6 +39,7 @@ export const courses: Course[] = coursesJson.map((courseJson: any): Course => {
       longName: courseJson.longName,
       description: courseJson.description,
       learningOutcomes: courseJson.learningOutcomes,
+      emphases: courseJson.emphases,
       credits: {
         creditHours: courseJson.credits.creditHours,
         lectureHours: courseJson.credits.lectureHours,

@@ -14,7 +14,7 @@ const HierarchyDisplay = (props: Props) => {
   useEffect(() => {
     if (selectedEmphasis) {
       const newFilteredCourses = props.courses.filter(
-        (course) => (course.emphasis || "CS General") === selectedEmphasis
+        (course) => course.emphases.includes(selectedEmphasis)
       );
       newFilteredCourses.sort((a, b) => a.code.localeCompare(b.code)); // Sort the courses alphabetically
       setFilteredCourses(newFilteredCourses);
@@ -81,8 +81,10 @@ const HierarchyDisplay = (props: Props) => {
     );
   };
 
-  // Get all unique emphasis values, including "CS General" for courses with null emphasis
-  const emphases = Array.from(new Set(props.courses.map(course => course.emphasis || "CS General")));
+  // Get all unique emphasis values
+  const emphases = ["No Emphasis", "Bioinformatics", "Animation", "Machine Learning", "Software Engineering"];
+  //Array.from(props.courses.reduce((acc, course) =>
+  //  course.emphases.forEach(emphasis => acc.add(emphasis)), new Set()));
 
   return (
     <div className="hierarchy-display-container">
