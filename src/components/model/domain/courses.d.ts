@@ -33,6 +33,7 @@ export interface Course {
   courseType: string; // e.g. "C - Combined Lecture and Activity"
   note?: string;
   fee?: string; // number; only on IS567
+  emphasis?: string; // e.g. "HCI"
 
   courseDependents: any[];
   programDependents: any[];

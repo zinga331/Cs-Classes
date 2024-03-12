@@ -7,38 +7,35 @@ interface Props {
 }
 
 const HierarchyDisplay = (props: Props) => {
-  const [selectedSeason, setSelectedSeason] = useState<string | null>(null);
+  const [selectedEmphasis, setSelectedEmphasis] = useState<string | null>(null);
   const [selectedCourse, setSelectedCourse] = useState<string | null>(null);
   const [filteredCourses, setFilteredCourses] = useState<Course[]>([]);
 
   useEffect(() => {
-    if (selectedSeason) {
+    if (selectedEmphasis) {
       const newFilteredCourses = props.courses.filter(
-        (course) => course.courseTypicallyOffered.includes(selectedSeason) ||
-        course.courseTypicallyOffered.includes("All Semesters/Terms")
+        (course) => (course.emphasis || "CS General") === selectedEmphasis
       );
       newFilteredCourses.sort((a, b) => a.code.localeCompare(b.code)); // Sort the courses alphabetically
       setFilteredCourses(newFilteredCourses);
     }
-  }, [selectedSeason, props.courses]);
+  }, [selectedEmphasis, props.courses]);
 
-  const handleSeasonClick = (season: string) => {
-    if (season === selectedSeason) {
+  const handleEmphasisClick = (emphasis: string) => {
+    if (emphasis === selectedEmphasis) {
       return;
     }
-    setSelectedSeason(season);
+    setSelectedEmphasis(emphasis);
     setSelectedCourse(null);
     setFilteredCourses([]);
-    
   };
 
   const handleCourseClick = (courseCode: string) => {
     setSelectedCourse(courseCode);
-    window.scrollTo(0, 0); // Scroll to the top of the component
   };
 
   const renderCourses = () => {
-    if (!selectedSeason) {
+    if (!selectedEmphasis) {
       return null;
     }
 
@@ -49,7 +46,7 @@ const HierarchyDisplay = (props: Props) => {
 
     return (
       <div className="courses-container">
-        <h2>Courses|</h2>
+        <h2>Courses |</h2>
         {uniqueCourseCodes.map((courseCode, index) => (
           <div key={index}>
             <button onClick={() => handleCourseClick(courseCode)}>
@@ -72,13 +69,11 @@ const HierarchyDisplay = (props: Props) => {
 
     return (
       <div className="course-details-container">
-        <h2>Course Details</h2>
+        <h2>Course Details :</h2>
         {courseDetails && (
           <div>
             <p>{courseDetails.longName}</p>
-            <p>{courseDetails.description}</p>
             <p>Credit Hours: {courseDetails.credits.creditHours.value}</p>
-            {courseDetails.note && <p>Note: {courseDetails.note}</p>}
             {/* Add more details as needed */}
           </div>
         )}
@@ -86,14 +81,17 @@ const HierarchyDisplay = (props: Props) => {
     );
   };
 
+  // Get all unique emphasis values, including "CS General" for courses with null emphasis
+  const emphases = Array.from(new Set(props.courses.map(course => course.emphasis || "CS General")));
+
   return (
     <div className="hierarchy-display-container">
-      <div className="seasons-container">
-        <h2>Seasons|</h2>
-        {["Fall", "Winter", "Spring", "Summer"].map((season, index) => (
+      <div className="emphases-container">
+        <h2>Emphasis |</h2>
+        {emphases.map((emphasis, index) => (
           <div key={index}>
-            <button onClick={() => handleSeasonClick(season)}>
-              {season}
+            <button onClick={() => handleEmphasisClick(emphasis)}>
+              {emphasis}
             </button>
           </div>
         ))}
