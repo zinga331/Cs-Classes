@@ -13,8 +13,8 @@ const HierarchyDisplay = (props: Props) => {
 
   useEffect(() => {
     if (selectedEmphasis) {
-      const newFilteredCourses = props.courses.filter(
-        (course) => course.emphases.includes(selectedEmphasis)
+      const newFilteredCourses = props.courses.filter((course) =>
+        course.emphases.includes(selectedEmphasis)
       );
       newFilteredCourses.sort((a, b) => a.code.localeCompare(b.code)); // Sort the courses alphabetically
       setFilteredCourses(newFilteredCourses);
@@ -47,7 +47,8 @@ const HierarchyDisplay = (props: Props) => {
     return (
       <div className="courses-container">
         <h2>Courses</h2>
-        <div style={{ maxHeight: 'calc(75vh - 50px)', overflowY: 'auto' }}> {/* TODO move these styles into the css*/}
+        <div className="each-course">
+          {" "}
           {uniqueCourseCodes.map((courseCode, index) => (
             <div key={index}>
               <button onClick={() => handleCourseClick(courseCode)}>
@@ -71,22 +72,73 @@ const HierarchyDisplay = (props: Props) => {
 
     return (
       <div className="course-details-container">
-        <h2>Course Details :</h2>
+        <h2 className="course-details-header">Course Details</h2>
         {courseDetails && (
-          <div>
-            <p>{courseDetails.code}, {courseDetails.longName}</p>
-            {courseDetails.requiredCredit && !courseDetails.electiveCredit && <p>Required</p>}
-            {!courseDetails.requiredCredit && courseDetails.electiveCredit && <p>For Elective Credit</p>}
-            {courseDetails.requiredCredit && courseDetails.electiveCredit && <p>Counts as Required or Elective Credit</p>}
+          <div className="course-details">
+            <p>
+              {courseDetails.code} {courseDetails.longName}
+            </p>
+            {courseDetails.requiredCredit && !courseDetails.electiveCredit && (
+              <p className="course-details-blue">Required</p>
+            )}
+            {!courseDetails.requiredCredit && courseDetails.electiveCredit && (
+              <p className="course-details-blue">For Elective Credit</p>
+            )}
+            {courseDetails.requiredCredit && courseDetails.electiveCredit && (
+              <p className="course-details-blue">
+                Counts as Required or Elective Credit
+              </p>
+            )}
 
-            {courseDetails.courseType && <p>Course Type: {courseDetails.courseType}</p>}
+            {courseDetails.courseType && (
+              <p>
+                {" "}
+                <span className="course-details-blue">Course Type: </span>
+                {courseDetails.courseType}
+              </p>
+            )}
 
-            <p>Credit Hours: {courseDetails.credits.creditHours.value}</p>
-            <p>Available Semesters: {courseDetails.courseTypicallyOffered}</p>
-            {courseDetails.prerequisite_string && <p>Prerequisites: {courseDetails.prerequisite_string}</p>}
-            {courseDetails.recommended && <p>Recommended: {courseDetails.recommended}</p>}
-            {courseDetails.nonEnforcedPrerequisites && <p>Non-Enforced Prerequisites: {courseDetails.nonEnforcedPrerequisites}</p>}
-            <p>{courseDetails.description}</p>
+            <p>
+              {" "}
+              <span className="course-details-blue"> Credit Hours: </span>
+              {courseDetails.credits.creditHours.value}
+            </p>
+            <p>
+              {" "}
+              <span className="course-details-blue">
+                {" "}
+                Available Semesters:{" "}
+              </span>{" "}
+              {courseDetails.courseTypicallyOffered}
+            </p>
+            {courseDetails.prerequisite_string && (
+              <p>
+                {" "}
+                <span className="course-details-blue"> Prerequisites: </span>
+                {courseDetails.prerequisite_string}
+              </p>
+            )}
+            {courseDetails.recommended && (
+              <p>
+                {" "}
+                <span className="course-details-blue"> Recommended: </span>
+                {courseDetails.recommended}
+              </p>
+            )}
+            {courseDetails.nonEnforcedPrerequisites && (
+              <p>
+                <span className="course-details-blue">
+                  {" "}
+                  Non-Enforced Prerequisites:{" "}
+                </span>{" "}
+                {courseDetails.nonEnforcedPrerequisites}
+              </p>
+            )}
+            <p>
+              {" "}
+              <span className="course-details-blue"> Description: </span>
+              {courseDetails.description}
+            </p>
             {courseDetails.objective && <p>{courseDetails.objective}</p>}
             {courseDetails.note && <p>{courseDetails.note}</p>}
             {/* Add more details as needed */}
@@ -97,12 +149,18 @@ const HierarchyDisplay = (props: Props) => {
   };
 
   // Get all unique emphasis values
-  const emphases = ["No Emphasis", "Bioinformatics", "Animation", "Machine Learning", "Software Engineering"];
+  const emphases = [
+    "No Emphasis",
+    "Bioinformatics",
+    "Animation",
+    "Machine Learning",
+    "Software Engineering",
+  ];
 
   return (
     <div className="hierarchy-display-container">
       <div className="emphases-container">
-        <h2>Emphasis |</h2>
+        <h2>Emphasis</h2>
         {emphases.map((emphasis, index) => (
           <div key={index}>
             <button onClick={() => handleEmphasisClick(emphasis)}>
@@ -111,7 +169,12 @@ const HierarchyDisplay = (props: Props) => {
           </div>
         ))}
       </div>
-      <div>{renderCourses()}</div>
+      <div className="vertical_break"></div>
+      {selectedEmphasis && (
+        <>
+          (<div>{renderCourses()}</div> <div className="vertical_break"></div>)
+        </>
+      )}
       {selectedCourse && <div>{renderCourseDetails()}</div>}
     </div>
   );

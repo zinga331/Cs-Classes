@@ -3,28 +3,80 @@
   position: absolute;
   top: 6rem;
   left: 1rem;
+  padding-top: 6vh;
 }
 
-.categories-container,
-.subcategories-container,
-.quotes-container {
-  margin-right: 3rem;
-  margin-left: 3rem;
+.courses-container,
+.course-details-container,
+.emphases-container {
+  margin-right: 75px;
+  margin-left: 75px;
+  text-align: center;
 }
 
-button {
-  margin-bottom: 10px;
+.course-details-header {
+  text-align: left;
+  color: #f0802c;
+  font-size: 2.75rem;
+}
+
+.each-course {
+  overflow-y: auto;
+  max-height: calc(75vh - 50px);
+  scrollbar-color: #559aaa #b0d6e1;
+}
+
+.course-details-container {
+  background-color: #b0d6e1;
+  text-align: left;
+  padding-left: 3vw;
+  padding-bottom: 3vh;
+}
+
+.hierarchy-display-container button {
+  margin-bottom: 5vh;
+  background-color: transparent;
+  color: #559aaa;
+}
+
+.hierarchy-display-container button:hover {
+  color: #b0d6e1;
+  transition: 0.1s;
+}
+
+.hierarchy-display-container button:visited,
+.hierarchy-display-container button:focus,
+.hierarchy-display-container button:active {
+  color: #f0802c;
 }
 
 h2 {
-  text-align: left;
-  color: #154c79;
+  text-align: center;
+  color: #f0802c;
+  font-size: 2.75rem;
+}
+
+.course-details-blue {
+  color: #559aaa;
+  font-weight: bold;
 }
 
 p {
-  color: #154c79;
+  color: #f6f6f6;
+  font-weight: bold;
+  width: 1000px;
+  font-size: 1.25em;
+  margin-right: 25px;
 }
 
 .vertical_break {
-  border-right: thin solid #d5d4cb;
+  border-right: 3px solid #123740;
+}
+
+.hierarchy-display-container button {
+  border: none;
+  font-size: 1.25em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
 }
