@@ -46,14 +46,16 @@ const HierarchyDisplay = (props: Props) => {
 
     return (
       <div className="courses-container">
-        <h2>Courses |</h2>
-        {uniqueCourseCodes.map((courseCode, index) => (
-          <div key={index}>
-            <button onClick={() => handleCourseClick(courseCode)}>
-              {courseCode}
-            </button>
-          </div>
-        ))}
+        <h2>Courses</h2>
+        <div style={{ maxHeight: 'calc(75vh - 50px)', overflowY: 'auto' }}> {/* TODO move these styles into the css*/}
+          {uniqueCourseCodes.map((courseCode, index) => (
+            <div key={index}>
+              <button onClick={() => handleCourseClick(courseCode)}>
+                {courseCode}
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     );
   };
@@ -72,8 +74,21 @@ const HierarchyDisplay = (props: Props) => {
         <h2>Course Details :</h2>
         {courseDetails && (
           <div>
-            <p>{courseDetails.longName}</p>
+            <p>{courseDetails.code}, {courseDetails.longName}</p>
+            {courseDetails.requiredCredit && !courseDetails.electiveCredit && <p>Required</p>}
+            {!courseDetails.requiredCredit && courseDetails.electiveCredit && <p>For Elective Credit</p>}
+            {courseDetails.requiredCredit && courseDetails.electiveCredit && <p>Counts as Required or Elective Credit</p>}
+
+            {courseDetails.courseType && <p>Course Type: {courseDetails.courseType}</p>}
+
             <p>Credit Hours: {courseDetails.credits.creditHours.value}</p>
+            <p>Available Semesters: {courseDetails.courseTypicallyOffered}</p>
+            {courseDetails.prerequisite_string && <p>Prerequisites: {courseDetails.prerequisite_string}</p>}
+            {courseDetails.recommended && <p>Recommended: {courseDetails.recommended}</p>}
+            {courseDetails.nonEnforcedPrerequisites && <p>Non-Enforced Prerequisites: {courseDetails.nonEnforcedPrerequisites}</p>}
+            <p>{courseDetails.description}</p>
+            {courseDetails.objective && <p>{courseDetails.objective}</p>}
+            {courseDetails.note && <p>{courseDetails.note}</p>}
             {/* Add more details as needed */}
           </div>
         )}
@@ -83,8 +98,6 @@ const HierarchyDisplay = (props: Props) => {
 
   // Get all unique emphasis values
   const emphases = ["No Emphasis", "Bioinformatics", "Animation", "Machine Learning", "Software Engineering"];
-  //Array.from(props.courses.reduce((acc, course) =>
-  //  course.emphases.forEach(emphasis => acc.add(emphasis)), new Set()));
 
   return (
     <div className="hierarchy-display-container">

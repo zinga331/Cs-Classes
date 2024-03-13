@@ -31,7 +31,7 @@ export interface Course {
 
   courseTypicallyOffered: string; // e.g. "Fall and Winter"
   courseType: string; // e.g. "C - Combined Lecture and Activity"
-  note?: string;
+  note?: string; // "This course is a prerequisite for CS 356"
   fee?: string; // number; only on IS567
 
   courseDependents: any[];
@@ -45,5 +45,12 @@ export interface Course {
   L95zy?: string;
   xq1Dp?: string;
 
-  awavi?: {name: string, path: string}[]; // ???
+  awavi?: {name: string, path: string}[]; // Lists document attachments for the course (we can't access these)
+
+  // Additional fields that Chris thought would be useful to have
+  objective?: string; // Analyze, write about, and discuss issues and ethical problems // This is under learningOutcomes
+  prerequisite_string?: string; // "CS 142 or equivalent"
+  // 9fzcu is the field that tells us if a course is required, elective, or both, it isn't always present
+  requiredCredit: boolean; // true // We get this value from 9fzcu in the json
+  electiveCredit: boolean; // false // We get this value from 9fzcu in the json
 }
