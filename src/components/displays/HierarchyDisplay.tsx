@@ -75,7 +75,6 @@ const HierarchyDisplay = (props: Props) => {
         {courseDetails && (
           <div>
             <p>{courseDetails.code}, {courseDetails.longName}</p>
-            {/*  */}
             {courseDetails.requiredCredit && !courseDetails.electiveCredit && <p>Required</p>}
             {!courseDetails.requiredCredit && courseDetails.electiveCredit && <p>For Elective Credit</p>}
             {courseDetails.requiredCredit && courseDetails.electiveCredit && <p>Counts as Required or Elective Credit</p>}
