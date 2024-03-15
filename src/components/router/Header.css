@@ -16,9 +16,13 @@ li {
   float: left;
 }
 
+.header {
+  height: 10vh;
+}
+
 .header_search {
   float: right;
-  padding: 1.5vh 1vh;
+  padding: 2vh 1vh;
 }
 
 .header_search button {
@@ -41,9 +45,9 @@ li a {
   display: block;
   color: #b0d6e1;
   text-align: center;
-  padding: 1vh 1vh;
+  padding: 1.5vh 1vh;
   text-decoration: none;
-  font-size: 2.75rem;
+  font-size: 2.75em;
 }
 
 .cs_logo {
@@ -54,17 +58,21 @@ li a {
 input {
   padding: 10px;
   width: 20vw;
-  border: 3px solid #ff861b;
+  border: 3px solid #f6f6f6;
   margin-top: 8px;
   font-size: 17px;
-  background-color: #123740;
+  background-color: #f6f6f6;
 }
 
-input:focus {
+input {
   outline: none;
+}
+
+.search_type {
+  color: #ff861b;
 }
 
 ::placeholder {
   color: #ff861b;
-  opacity: 65%;
+  opacity: 30%;
 }

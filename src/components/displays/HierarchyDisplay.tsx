@@ -162,7 +162,7 @@ const HierarchyDisplay = (props: Props) => {
       <div className="emphases-container">
         <h2>Emphasis</h2>
         {emphases.map((emphasis, index) => (
-          <div key={index}>
+          <div className="each_empahses" key={index}>
             <button onClick={() => handleEmphasisClick(emphasis)}>
               {emphasis}
             </button>

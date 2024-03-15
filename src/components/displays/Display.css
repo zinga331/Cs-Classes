@@ -4,14 +4,15 @@
   top: 6rem;
   left: 1rem;
   padding-top: 6vh;
+  min-width: 1000px;
 }
 
 .courses-container,
 .course-details-container,
 .emphases-container {
-  margin-right: 75px;
-  margin-left: 75px;
   text-align: center;
+  margin-right: 5vw;
+  margin-left: 5vw;
 }
 
 .course-details-header {
@@ -22,8 +23,13 @@
 
 .each-course {
   overflow-y: auto;
+  width: 10vw;
   max-height: calc(75vh - 50px);
   scrollbar-color: #559aaa #b0d6e1;
+}
+
+.each_empahses {
+  width: 10vw;
 }
 
 .course-details-container {
@@ -64,7 +70,6 @@ h2 {
 p {
   color: #f6f6f6;
   font-weight: bold;
-  width: 1000px;
   font-size: 1.25em;
   margin-right: 25px;
 }

@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <Router>
-      <div>
+      <div className="header">
         <ul>
           <li>
             <img className="cs_logo" src="public\cs_logo.png" alt="cs_logo" />
@@ -23,7 +23,11 @@ const Header = () => {
             </Link>
           </li>
           <li className="header_search">
-            <input type="text" placeholder="Search Catalog..." />
+            <input
+              className="search_type"
+              type="text"
+              placeholder="Search Catalog..."
+            />
             <button type="submit" onClick={handleSearch}>
               Submit
             </button>
