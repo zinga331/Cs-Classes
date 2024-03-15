@@ -5,7 +5,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #154c79;
+  background-color: #123740;
   position: fixed;
   width: 100%;
   top: 0;
@@ -14,17 +14,65 @@ ul {
 
 li {
   float: left;
-  padding-right: 1rem;
+}
+
+.header {
+  height: 10vh;
+}
+
+.header_search {
+  float: right;
+  padding: 2vh 1vh;
+}
+
+.header_search button {
+  float: right;
+  padding: 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ff861b;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border: 3px solid #ff861b;
+}
+
+.header_search button:hover {
+  opacity: 75%;
 }
 
 li a {
   display: block;
-  color: white;
+  color: #b0d6e1;
   text-align: center;
-  padding: 1rem 1rem;
+  padding: 1.5vh 1vh;
   text-decoration: none;
+  font-size: 2.75em;
 }
 
-li a:hover {
-  background-color: #fff;
+.cs_logo {
+  height: 100px;
+  width: 150px;
+}
+
+input {
+  padding: 10px;
+  width: 20vw;
+  border: 3px solid #f6f6f6;
+  margin-top: 8px;
+  font-size: 17px;
+  background-color: #f6f6f6;
+}
+
+input {
+  outline: none;
+}
+
+.search_type {
+  color: #ff861b;
+}
+
+::placeholder {
+  color: #ff861b;
+  opacity: 30%;
 }

@@ -6,15 +6,31 @@ import { courses } from "../model/service/courseService.ts";
 import "./Header.css";
 
 const Header = () => {
+  const handleSearch = () => {
+    //TODO: Navigate to search here
+  };
+
   return (
     <Router>
-      <div>
+      <div className="header">
         <ul>
           <li>
-            <Link to="/hierchy">BYU CS</Link>
+            <img className="cs_logo" src="public\cs_logo.png" alt="cs_logo" />
           </li>
           <li>
-            <Link to="/SearchDisplay">Search</Link>
+            <Link className="header_courses" to="/hierchy">
+              CS Course Catalog
+            </Link>
+          </li>
+          <li className="header_search">
+            <input
+              className="search_type"
+              type="text"
+              placeholder="Search Catalog..."
+            />
+            <button type="submit" onClick={handleSearch}>
+              Submit
+            </button>
           </li>
         </ul>
 
@@ -31,7 +47,6 @@ const Header = () => {
           <Route path="/" element={<HierarchyDisplay courses={courses} />} />
         </Routes>
       </div>
-
     </Router>
   );
 };
