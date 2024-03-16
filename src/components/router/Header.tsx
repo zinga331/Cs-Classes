@@ -15,7 +15,7 @@ const Header = () => {
       <div className="header">
         <ul>
           <li>
-            <img className="cs_logo" src="public\cs_logo.png" alt="cs_logo" />
+            <img className="cs_logo" src="/cs_logo.png" alt="cs_logo" />
           </li>
           <li>
             <Link className="header_courses" to="/hierchy">
