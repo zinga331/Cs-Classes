@@ -1,6 +1,6 @@
 /* Header.css */
 
-ul {
+.header_ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -10,69 +10,37 @@ ul {
   width: 100%;
   top: 0;
   z-index: 1;
+  border-bottom: solid 2px #b0d6e1;
 }
 
-li {
+.header_li {
   float: left;
 }
 
-.header {
-  height: 10vh;
-}
-
-.header_search {
-  float: right;
-  padding: 2vh 1vh;
-}
-
-.header_search button {
-  float: right;
-  padding: 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ff861b;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-  border: 3px solid #ff861b;
-}
-
-.header_search button:hover {
-  opacity: 75%;
-}
-
-li a {
+.header_li h2 {
   display: block;
-  color: #b0d6e1;
+  color: #f9f9f9;
   text-align: center;
-  padding: 1.5vh 1vh;
   text-decoration: none;
-  font-size: 2.75em;
+  font-size: 1.75em;
+  margin-top: 1vh;
+  margin-bottom: 0.75vh;
 }
 
-.cs_logo {
-  height: 100px;
-  width: 150px;
+.catalog_title {
+  font-weight: 400;
 }
 
-input {
-  padding: 10px;
-  width: 20vw;
-  border: 3px solid #f6f6f6;
-  margin-top: 8px;
-  font-size: 17px;
-  background-color: #f6f6f6;
+.byu_title {
+  margin-left: 1vw;
+  font-weight: 800;
+  letter-spacing: 0.1vw;
 }
 
-input {
-  outline: none;
-}
-
-.search_type {
-  color: #ff861b;
-}
-
-::placeholder {
-  color: #ff861b;
-  opacity: 30%;
+.vertical_break_header {
+  font-weight: 100;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border: solid 1px #559aaa;
+  height: 1.75em;
 }

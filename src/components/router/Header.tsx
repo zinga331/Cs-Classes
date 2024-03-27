@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import HierarchyDisplay from "../displays/HierarchyDisplay.tsx";
 import SearchDisplay from "../displays/SearchDisplay.tsx";
 // import { getQuotes } from "../model/service/quoteService.ts";
@@ -6,31 +6,18 @@ import { courses } from "../model/service/courseService.ts";
 import "./Header.css";
 
 const Header = () => {
-  const handleSearch = () => {
-    //TODO: Navigate to search here
-  };
-
   return (
     <Router>
       <div className="header">
-        <ul>
-          <li>
-            <img className="cs_logo" src="cs_logo.png" alt="cs_logo" />
+        <ul className="header_ul">
+          <li className="header_li">
+            <h2 className="byu_title">BYU</h2>
           </li>
-          <li>
-            <Link className="header_courses" to="/hierchy">
-              CS Course Catalog
-            </Link>
+          <li className="header_li">
+            <h2 className="vertical_break_header"></h2>
           </li>
-          <li className="header_search">
-            <input
-              className="search_type"
-              type="text"
-              placeholder="Search Catalog..."
-            />
-            <button type="submit" onClick={handleSearch}>
-              Submit
-            </button>
+          <li className="header_li">
+            <h2 className="catalog_title">Computer Science Course Catalog</h2>
           </li>
         </ul>
 
