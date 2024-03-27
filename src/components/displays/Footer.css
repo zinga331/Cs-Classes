@@ -1,13 +1,16 @@
 .footer_ul {
-  list-style: none;
-  margin-bottom: 0;
-  padding: 0;
-  background-color: #123740;
-  display: block;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  z-index: 1;
+  @media screen and (min-height: 800px) {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+    background-color: #123740;
+    display: block;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    height: 15vh;
+  }
 }
 
 .byu_footer {
