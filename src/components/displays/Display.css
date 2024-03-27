@@ -5,11 +5,15 @@
   left: 1rem;
   padding-top: 6.5vh;
   min-width: 1000px;
-  padding-bottom: 3vh;
+  padding-bottom: 25vh; /* Padding needs to be at least this much to keep Chris' small screen from cutting things off with the footer. */
 }
 
 .courses-container,
-.emphases-container {
+.emphases-container, .course-details-container {
+  overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  scrollbar-color: #ceeaf2 #fff;
+  scrollbar-width: thin;
   text-align: center;
   margin-right: 2vw;
   margin-left: 2vw;
@@ -17,6 +21,7 @@
 }
 
 .emphases-container {
+  min-width: 200px; 
   border-top: 1vh solid #b0d6e1;
   border-radius: 10px;
   background-color: #fff;
@@ -27,9 +32,6 @@
 }
 
 .courses-container {
-  overflow-y: auto;
-  scrollbar-color: #ceeaf2 #fff;
-  scrollbar-width: thin;
   border-top: 1vh solid #b0d6e1;
   border-radius: 10px;
   background-color: #fff;
@@ -58,9 +60,6 @@
 .course-details-container {
   border-bottom: 1vh solid #fff;
   height: 57vh;
-  overflow-y: auto;
-  scrollbar-color: #ceeaf2 #fff;
-  scrollbar-width: thin;
   padding-left: 4vw;
   padding-right: 4vw;
   border-top: 1vh solid #b0d6e1;
