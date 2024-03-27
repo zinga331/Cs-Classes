@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Course } from "../model/domain/courses";
 import "./Display.css";
+import Footer from "./Footer";
 
 interface Props {
   courses: Course[];
@@ -158,25 +159,29 @@ const HierarchyDisplay = (props: Props) => {
   ];
 
   return (
-    <div className="hierarchy-display-container">
-      <div className="emphases-container">
-        <h2>Emphasis</h2>
-        {emphases.map((emphasis, index) => (
-          <div className="each_empahses" key={index}>
-            <button onClick={() => handleEmphasisClick(emphasis)}>
-              {emphasis}
-            </button>
-          </div>
-        ))}
+    <>
+      <div className="hierarchy-display-container">
+        <div className="emphases-container">
+          <h2>Emphasis</h2>
+          {emphases.map((emphasis, index) => (
+            <div className="each_empahses" key={index}>
+              <button onClick={() => handleEmphasisClick(emphasis)}>
+                {emphasis}
+              </button>
+            </div>
+          ))}
+        </div>
+        {selectedEmphasis && (
+          <>
+            (<div>{renderCourses()}</div>)
+          </>
+        )}
+        {selectedCourse && <div>{renderCourseDetails()}</div>}
       </div>
-      <div className="vertical_break"></div>
-      {selectedEmphasis && (
-        <>
-          (<div>{renderCourses()}</div> <div className="vertical_break"></div>)
-        </>
-      )}
-      {selectedCourse && <div>{renderCourseDetails()}</div>}
-    </div>
+      <div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

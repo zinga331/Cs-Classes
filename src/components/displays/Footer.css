@@ -1,0 +1,35 @@
+.footer_ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+  background-color: #123740;
+  display: block;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+}
+
+.byu_footer {
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+  color: #f9f9f9;
+  margin-top: 0.5vh;
+}
+
+.byu_location {
+  font-weight: lighter;
+  font-size: 1em;
+  color: #f9f9f9;
+  margin-top: 2vh;
+  margin-bottom: 0;
+}
+
+.disclaimer {
+  font-weight: lighter;
+  font-size: 1em;
+  color: #f9f9f9;
+  margin-top: 0.5vh;
+  padding-bottom: 1vh;
+}
